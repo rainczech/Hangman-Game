@@ -8,6 +8,7 @@ var wrongChoice = [];
 var triesLeft = 10;
 var spaces = [];
 var choice = words[Math.floor(Math.random() * words.length)]
+// var userGuesses = choice.fromCharCode(event.which).toLowerCase();
 // functions
 // ===================
 // pick a word at random
@@ -21,17 +22,24 @@ function startGame(){
 // print underscores to screen
     document.getElementById("wordBlanks").textContent = spaces.join(" ");
 // values reset
-userGuesses = [];
+// userGuesses = [];
 wrongChoice = [];
-triesLeft - 10;
+triesLeft = 10;
 document.getElementById("tries-left").textContent = triesLeft;   
 };
 
 // log users keys/guesses
-document.onkeyup = function(event) {
-    userGuesses = event.key;
+document.onkeyup = function() {
+    // userGuesses = event.key
+    var userGuesses = choice.fromCharCode(event.which).toLowerCase();
     if(choice.indexOf(userGuesses) > -1) {
-        console.log("yes");
+        for(i=0; i<choice.length; i++) {
+            if (choice[i] === userGuesses)
+            {
+                spaces[i]= userGuesses;
+                console.log(spaces);
+            }
+        }
     }
     else {
         wrongChoice.push(userGuesses);
@@ -39,10 +47,7 @@ document.onkeyup = function(event) {
         triesLeft--;
         console.log(triesLeft);
     }
-
-}
-
-
+};
 
 
 
