@@ -31,7 +31,7 @@ document.getElementById("tries-left").textContent = triesLeft;
 // log users keys/guesses
 document.onkeyup = function() {
     // userGuesses = event.key
-    userGuesses = choice.fromCharCode(event.which).toLowerCase();
+    userGuesses = event.key.toLowerCase();
     if(choice.indexOf(userGuesses) > -1) {
         for(i=0; i<choice.length; i++) {
             if (choice[i] === userGuesses)
