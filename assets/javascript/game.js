@@ -7,13 +7,13 @@ var userGuesses = [];
 var wrongChoice = [];
 var triesLeft = 10;
 var spaces = [];
-var choice = words[Math.floor(Math.random() * words.length)]
+var choice = "";
 // var userGuesses = choice.fromCharCode(event.which).toLowerCase();
 // functions
 // ===================
 // pick a word at random
 function startGame(){
-    var choice = words[Math.floor(Math.random() * words.length)];
+    choice = words[Math.floor(Math.random() * words.length)];
     console.log(choice);
 // get the underscores
     for(var i=0; i<choice.length; i++){
@@ -31,7 +31,7 @@ document.getElementById("tries-left").textContent = triesLeft;
 // log users keys/guesses
 document.onkeyup = function() {
     // userGuesses = event.key
-    var userGuesses = choice.fromCharCode(event.which).toLowerCase();
+    userGuesses = choice.fromCharCode(event.which).toLowerCase();
     if(choice.indexOf(userGuesses) > -1) {
         for(i=0; i<choice.length; i++) {
             if (choice[i] === userGuesses)
