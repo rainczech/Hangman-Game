@@ -25,14 +25,32 @@
     </div>
     <div class="container">
     <!-- game area -->
+    <div class="row">
     <h2>Welcome to Hangman</h2>
-    <p>Press a letter to begin. You have 10 tries to solve this hangman puzzle in honor of the 2018 Winter Olympics.</p>
-
+    <p>Press a letter to begin. You have 10 tries to solve this hangman puzzle in honor of the 2018 Winter Olympics in South Korea.</p>
+    </div>
+    <div class="row">
     <h3 id="wordBlanks">bonjour</h3>
-    <h2>Tries left: <span id="tries-left"></span></h2>
-    <!-- <h3 id="tries-left"></h3> -->
-    <h3 id="user-guesses"></h3>
-    <h3 id="wrong-choices"></h3>
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-sm-6">
+        <div class="panel-body">
+                <h2>Tries left: <span id="tries-left"></span></h2>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Guesses You've Made</h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <p id="wrong-choices"></p>
+        </div>
+    </div>
+    </div>
     <h3 ></h3>
     
 

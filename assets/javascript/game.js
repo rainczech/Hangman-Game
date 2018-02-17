@@ -1,6 +1,6 @@
 // variables
 // ===================
-var words=["korea", "bobsled", "skis", "snow"];
+var words=["drones", "bobsled", "skis", "snow"];
 var wins = 0;
 var loss = 0;
 var userGuesses = [];
@@ -63,6 +63,7 @@ document.onkeyup = function() {
         triesLeft--;
         console.log(triesLeft);
         document.getElementById("tries-left").textContent = triesLeft;
+        document.getElementById("wrong-choices").textContent = wrongChoice;
         win();
     }
     } else{
